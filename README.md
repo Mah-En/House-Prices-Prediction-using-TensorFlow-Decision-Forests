@@ -23,13 +23,13 @@ The dataset includes information about various aspects of residential properties
 ### Data Visualization
 Several visualizations were created to better understand the data, particularly the distribution of numerical features and the target variable (`SalePrice`). These plots help identify patterns and potential outliers in the dataset.
 
-![Numerical Features Plot](images/numerical_features_plot.png)
+![Numerical Features Plot](images/Numerical_features_plot.png)
 
 This plot illustrates the distribution of various numerical features in the dataset, helping in identifying outliers or patterns that may influence house prices.
 
 ### Distribution of Sale Prices
 
-![SalePrice Distribution](images/saleprice_distribution.png)
+![SalePrice Distribution](images/Saleprice_distribution.png)
 
 This figure shows the distribution of `SalePrice`. The plot indicates that most homes are priced around $200,000, with a skew towards higher prices.
 
@@ -39,7 +39,7 @@ A **Random Forest** model is used as the baseline for this project. The model is
 ### Model Evaluation
 The model is evaluated using the **Out of Bag (OOB)** score and **Root Mean Squared Error (RMSE)**. These metrics help assess the accuracy and performance of the Random Forest model.
 
-![RMSE Score](images/rmse_score.png)
+![RMSE Score](images/Rmse_score.png)
 
 This plot shows the RMSE score based on the number of trees in the Random Forest model. Smaller RMSE values indicate better performance.
 
