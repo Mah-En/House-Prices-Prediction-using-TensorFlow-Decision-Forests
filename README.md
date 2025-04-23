@@ -1,76 +1,64 @@
-House Prices Prediction using TensorFlow Decision Forests
-Overview
+# House Prices Prediction using TensorFlow Decision Forests
+
+## Overview
 This project aims to predict house prices using machine learning techniques. Specifically, it demonstrates the process of building a baseline Random Forest model using TensorFlow Decision Forests (TF-DF) to predict house prices based on various features from a dataset of residential homes in Ames, Iowa.
 
-Objective
+## Objective
 The goal of this project is to predict the sales price of houses based on 79 explanatory variables, including characteristics such as the number of rooms, the size of the lot, the year built, and more. This model uses decision forests to make accurate predictions, and the project provides a detailed workflow for building, evaluating, and refining the model.
 
-Dataset
-The dataset used in this project is the House Prices dataset, which contains:
+## Dataset
+The dataset used in this project is the **House Prices dataset**, which contains:
+- 1460 rows (homes)
+- 81 columns (79 features and 1 target column: `SalePrice`)
 
-1460 rows (homes)
+The dataset includes information about various aspects of residential properties, including structural details and the final sale price. The primary task is to predict the `SalePrice` variable.
 
-81 columns (79 features and 1 target column: SalePrice)
+## Methods
 
-The dataset includes information about various aspects of residential properties, including structural details and the final sale price. The primary task is to predict the SalePrice variable.
+### Preprocessing
+1. **Handling Missing Values**: Missing values are addressed, though this is not fully implemented in the initial model.
+2. **Dropping Unnecessary Columns**: The `Id` column is removed, as it doesn't contribute to the prediction.
+3. **Feature Engineering**: Basic feature inspection is performed, with future work recommended for feature creation and transformation.
 
-Methods
-Preprocessing
-Handling Missing Values: Missing values are addressed, though this is not fully implemented in the initial model.
+### Data Visualization
+Several visualizations were created to better understand the data, particularly the distribution of numerical features and the target variable (`SalePrice`). These plots help identify patterns and potential outliers in the dataset.
 
-Dropping Unnecessary Columns: The Id column is removed, as it doesn't contribute to the prediction.
+### Model Selection
+A **Random Forest** model is used as the baseline for this project. The model is robust to overfitting and is simple to use, making it ideal for this task. Other models, such as **GradientBoostedTrees** or **CART** models, could be explored in future work.
 
-Feature Engineering: Basic feature inspection is performed, with future work recommended for feature creation and transformation.
+### Model Evaluation
+The model is evaluated using the **Out of Bag (OOB)** score and **Root Mean Squared Error (RMSE)**. These metrics help assess the accuracy and performance of the Random Forest model.
 
-Data Visualization
-Several visualizations were created to better understand the data, particularly the distribution of numerical features and the target variable (SalePrice). These plots help identify patterns and potential outliers in the dataset.
+### Variable Importance
+The importance of various features is evaluated using the `NUM AS ROOT` metric, which identifies the most influential features in the model.
 
-Model Selection
-A Random Forest model is used as the baseline for this project. The model is robust to overfitting and is simple to use, making it ideal for this task. Other models, such as GradientBoostedTrees or CART models, could be explored in future work.
-
-Model Evaluation
-The model is evaluated using the Out of Bag (OOB) score and Root Mean Squared Error (RMSE). These metrics help assess the accuracy and performance of the Random Forest model.
-
-Variable Importance
-The importance of various features is evaluated using the NUM AS ROOT metric, which identifies the most influential features in the model.
-
-Results
-The Random Forest model provides a solid baseline for house price prediction. Important features such as lot area, overall quality, and year built significantly contribute to price prediction.
+## Results
+The Random Forest model provides a solid baseline for house price prediction. Important features such as **lot area**, **overall quality**, and **year built** significantly contribute to price prediction.
 
 The model performs well overall, though some biases are observed in extreme price ranges. Further improvements, such as hyperparameter tuning and incorporating external data (e.g., economic indicators), can enhance the model’s performance.
 
-Future Work
-Hyperparameter tuning to optimize the Random Forest model.
+## Future Work
+- Hyperparameter tuning to optimize the Random Forest model.
+- Exploration of other models like **Gradient Boosted Trees** or **Deep Learning** approaches.
+- Incorporation of external market data to further improve prediction accuracy.
+- Extensive feature engineering and missing value handling.
 
-Exploration of other models like Gradient Boosted Trees or Deep Learning approaches.
+## Requirements
+- **Python 3.x**
+- **TensorFlow** and **TensorFlow Decision Forests**
+- **Pandas**
+- **Matplotlib**
+- **Seaborn**
 
-Incorporation of external market data to further improve prediction accuracy.
-
-Extensive feature engineering and missing value handling.
-
-Requirements
-Python 3.x
-
-TensorFlow and TensorFlow Decision Forests
-
-Pandas
-
-Matplotlib
-
-Seaborn
-
-Installation
+### Installation
 To set up the environment and run the project:
 
-Install required libraries:
+1. Install required libraries:
+   ```bash
+   pip install tensorflow tensorflow-decision-forests pandas matplotlib seaborn
 
-bash
-Copy
-Edit
-pip install tensorflow tensorflow-decision-forests pandas matplotlib seaborn
-Load the dataset and run the model in a Jupyter notebook.
+2. Load the dataset and run the model in a Jupyter notebook.
 
-References
-TensorFlow Decision Forests Documentation
-
-House Prices Dataset on Kaggle
+## References
+- [TensorFlow Decision Forests Documentation](https://www.tensorflow.org/decision_forests)
+- [House Prices Dataset on Kaggle](https://www.kaggle.com/c/house-prices-advanced-regression-techniques)
