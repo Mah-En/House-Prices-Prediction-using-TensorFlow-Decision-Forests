@@ -29,7 +29,7 @@ This plot illustrates the distribution of various numerical features in the data
 
 ### Distribution of Sale Prices
 
-![SalePrice Distribution](images/Saleprice_distribution.png)
+![SalePrice Distribution](images/Dist_figure.png)
 
 This figure shows the distribution of `SalePrice`. The plot indicates that most homes are priced around $200,000, with a skew towards higher prices.
 
@@ -39,14 +39,14 @@ A **Random Forest** model is used as the baseline for this project. The model is
 ### Model Evaluation
 The model is evaluated using the **Out of Bag (OOB)** score and **Root Mean Squared Error (RMSE)**. These metrics help assess the accuracy and performance of the Random Forest model.
 
-![RMSE Score](images/Rmse_score.png)
+![RMSE Score](images/RMSE (out-of-bag) plot.png)
 
 This plot shows the RMSE score based on the number of trees in the Random Forest model. Smaller RMSE values indicate better performance.
 
 ### Variable Importance
 The importance of various features is evaluated using the `NUM AS ROOT` metric, which identifies the most influential features in the model.
 
-![Variable Importance](images/variable_importance.png)
+![Variable Importance](images/Variable_importance_plot.png)
 
 This plot illustrates the variable importance in the Random Forest model, showing which features, such as lot area and overall quality, contribute the most to predicting house prices.
 
